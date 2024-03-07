@@ -3,7 +3,6 @@
     margin: 0;
     box-sizing: border-box;
 }
-
 .header{
     text-align: right;
     background-color: gray;
@@ -27,7 +26,7 @@
 }
 .home{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     margin-top: 50px;
     justify-content: space-between;
@@ -47,9 +46,9 @@
     margin-bottom: 8px;
 }
 .right{
+    padding-top: 100px;
     width: 50vw;
     text-align: center;
-    padding-right: 200px;
     text-align: justify;
     text-justify: inter-word;
 }
