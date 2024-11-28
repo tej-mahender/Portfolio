@@ -1,31 +1,25 @@
 import React from "react";
 import "./App.css";
-
-const App = () => {
+import {createBrowserRouter,RouterProvider } from "react-router-dom";
+import Home from './components/home/Home'
+import RootLayout from "./RootLayout";
+import RoutingError from './components/RoutingError'
+const App = ({children}) => {
+  const router = createBrowserRouter([
+    {
+      path:'',
+        element: <RootLayout />,
+        errorElement: <RoutingError />,
+        children:[
+          {
+            path:'',
+            element: <Home />
+          }
+        ]
+      }
+  ])
   return (
-    <>
-    <header>
-      <div className="header-container">
-        <div className="content">
-          <h1 className="logo" aria-level="1">
-            Hello, I'm 
-          </h1>
-          <h2 className="main-title" aria-level="2">
-            Tej Mahendra
-          </h2>
-          <p className="subtitle">
-            A passionate software developer
-          </p>
-          </div>
-          <button className="scroll-button">
-            <span className="arrow">↓</span> Scroll
-          </button>
-      </div>
-    </header>
-    <body>
-      
-    </body>
-    </>
+    <RouterProvider router ={router}>{children}</RouterProvider>
   );
 };
 
