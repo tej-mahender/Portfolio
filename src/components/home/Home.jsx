@@ -1,30 +1,40 @@
 import React from "react";
 import "./Home.css";
+import NavBar from "../navbar/Navbar";
+import About from "../about/About";
+import Projects from "../projects/Projects";
+import Contact from "../contact/Contact";
 
 const Home = () => {
   return (
     <>
     <header>
-      <div className="header-container">
-        <div className="content">
-          <h1 className="logo" aria-level="1">
+      <div className="home-container">
+        <div className="home-content">
+          <h1 className="home-logo" aria-level="1">
             Hello, I'm 
           </h1>
-          <h2 className="main-title" aria-level="2">
+          <h2 className="home-main-title" aria-level="2">
             Tej Mahendra
           </h2>
-          <p className="subtitle">
+          <p className="home-subtitle">
             A passionate software developer
           </p>
           </div>
-          <button className="scroll-button">
-            <span className="arrow">↓</span> Scroll
-          </button>
       </div>
     </header>
-    {/* <body>
-      
-    </body> */}
+    
+    <NavBar/>
+
+    <section id="about" className="min-h-screen bg-[#ddd] p-10">
+        <About />
+      </section>
+      <section id="projects" className="min-h-screen bg-[#ccc] p-10">
+        <Projects />
+      </section>
+      <section id="contact" className="min-h-screen bg-[#bbb] p-10">
+        <Contact />
+      </section>
     </>
   );
 };

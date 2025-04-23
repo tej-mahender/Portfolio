@@ -1,11 +1,4 @@
-/* Reset Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* General Styling */
+*
   body, html {
     font-family: "Arial", sans-serif;
     height: 100%;
@@ -23,7 +16,7 @@
     align-items: center;
     padding: 0 10%;
   }
-  .header-container{
+  .home-container{
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -32,7 +25,7 @@
     align-items: flex-start;
     padding-left: 5%;
   }
-  .logo {
+  .home-logo {
     font-size: 2rem;
     font-weight: 700;
     color: #644834;
@@ -40,7 +33,7 @@
     letter-spacing: 0.1em;
   }
   
-  .main-title {
+  .home-main-title {
     font-size:6rem;
     font-weight: 900;
     color: #2e2e2e;
@@ -50,38 +43,11 @@
     letter-spacing: -0.03em;
   }
   
-  .subtitle {
+  .home-subtitle {
     font-size: 1.25rem;
     font-weight: 400;
     color: #644834;
     line-height: 1.4;
-  }
-  
-  .scroll-button {
-    color: #644834;
-    border: none;
-    background: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute; /* Position it at the bottom */
-    bottom: 5%; /* Slight margin from the bottom */
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-  
-  .scroll-button .arrow {
-    font-size: 1.5rem;
-    margin-right: 0.25rem;
-  }
-  
-  .scroll-button:hover {
-    background:none;
-    transform: translateY(-5px);
-  }
-  
-  .scroll-button:active {
-    transform: translateY(0);
   }
   
   /* Animation */
@@ -97,28 +63,20 @@
     }
   }
   
-  .scroll-button .arrow {
-    animation: bounce 2s infinite;
-  }
-  
   /* Responsive Design */
   @media (max-width: 768px) {
-    .header-container {
+    .home-container {
       padding: 0 5%;
       max-width: 100%; /* Allow more flexibility on smaller screens */
       gap: 0.75rem; /* Slightly reduce spacing */
     }
   
-    .main-title {
+    .home-main-title {
       font-size: 3rem; /* Scale down for mobile */
     }
   
-    .subtitle {
+    .home-subtitle {
       font-size: 1rem;
-    }
-  
-    .scroll-button {
-      font-size: 0.9rem;
     }
   }
   

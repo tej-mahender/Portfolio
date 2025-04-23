@@ -15,6 +15,7 @@ const App = ({children}) => {
             path:'',
             element: <Home />
           }
+
         ]
       }
   ])
