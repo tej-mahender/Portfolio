@@ -32,7 +32,7 @@ const Home = () => {
       <section id="projects" className="min-h-screen bg-[#ccc] p-10">
         <Projects />
       </section>
-      <section id="contact" className="min-h-screen bg-[#bbb] p-10">
+      <section id="contact" className="bg-[#ccc] ">
         <Contact />
       </section>
     </>
