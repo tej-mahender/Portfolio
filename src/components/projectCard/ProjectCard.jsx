@@ -3,7 +3,7 @@ import React from 'react'
 const ProjectCard = ({ project, onClick }) => {
   return (
     <div
-      className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition cursor-pointer"
+      className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition cursor-pointer "
       onClick={() => onClick(project)}
     >
       {project.image ? (
@@ -13,6 +13,7 @@ const ProjectCard = ({ project, onClick }) => {
           src={project.iframe}
           className="w-full h-48 border-0"
           title={project.title}
+          scrolling="no" 
         ></iframe>
       )}
       <div className="p-4 space-y-2">
@@ -25,10 +26,20 @@ const ProjectCard = ({ project, onClick }) => {
             </span>
           ))}
         </div>
-        <div className="flex gap-4 mt-2 text-blue-600 text-sm">
-          <a href={project.live} target="_blank" rel="noopener noreferrer">Live Site</a>
-          <a href={project.code} target="_blank" rel="noopener noreferrer">Code</a>
-        </div>
+           {(project.live || project.code) && (
+          <div className="flex gap-4 mt-2 text-blue-600 text-sm">
+            {project.live && (
+              <a href={project.live} target="_blank" rel="noopener noreferrer">
+                Live Site
+              </a>
+            )}
+            {project.code && (
+              <a href={project.code} target="_blank" rel="noopener noreferrer">
+                Code
+              </a>
+            )}
+          </div>
+        )}
       </div>
     </div>
   )

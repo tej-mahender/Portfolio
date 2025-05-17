@@ -1,6 +1,6 @@
 import React from 'react'
-import SkillBlock from '../skillBlock/SkillBlock'
-
+// import SkillBlock from '../skillBlock/SkillBlock'
+import Skills from '../skills/Skills';
 function About() {
   return (
     <div>
@@ -33,7 +33,7 @@ function About() {
             Download Resume
           </a>
         
-      <section id="skills" className="m-">
+      {/* <section id="skills" className="m-">
         <div className="max-w-7xl mx-auto text-left space-y-6">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800">Skills</h2>
           <SkillBlock title="Languages" skills={['C++', 'C', 'JavaScript', 'SQL']} />
@@ -41,7 +41,8 @@ function About() {
           <SkillBlock title="Concepts" skills={['OOPs', 'DSA', 'Operating Systems', 'Computer Networks']} />
           <SkillBlock title="Tools" skills={['Git', 'GitHub', 'Visual Studio Code', 'Notion']} />
         </div>
-      </section>
+      </section> */}
+      <Skills />
       </div>
       </section>
 
