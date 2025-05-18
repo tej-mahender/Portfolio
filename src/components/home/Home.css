@@ -9,12 +9,12 @@
     position: relative;
     height: 100vh;
     overflow: hidden;
-    text-align: center;
     background: linear-gradient(to bottom, #eeeae2 50%, #c7a991 50%);
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding: 0 10%;
+    text-align: center;
   }
   .home-container{
     height: 100%;
@@ -24,6 +24,8 @@
     text-align: left;
     align-items: flex-start;
     padding-left: 5%;
+    transform: translateY(-20px); /* Move the whole block up */
+
   }
   .home-logo {
     font-size: 2rem;
@@ -31,13 +33,13 @@
     color: #644834;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
   }
   
   .home-main-title {
     font-size:6rem;
     font-weight: 900;
     color: #2e2e2e;
-    margin-bottom: -1rem 0 1rem 0;
     margin: 0;
     line-height: 1.2;
     letter-spacing: -0.03em;
@@ -48,16 +50,17 @@
     font-weight: 400;
     color: #644834;
     line-height: 1.4;
+    margin-top: 10px;
+    margin-left: 20px;
+    min-height: 30px; 
   }
-.home-content {
-  transform: translateY(-25px); /* Move the whole block up */
-}
-
     @media (max-width: 768px) {
     .home-container {
       padding: 0 5%;
       max-width: 100%; 
       gap: 0.75rem; 
+      transform: translateY(-1.5%);
+
     }
   
     .home-main-title {
