@@ -20,8 +20,8 @@ function Contact() {
           />
         </svg>
       </div>
-
-      <div className="contact w-full px-6 py-20 flex flex-col items-center relative">
+      <div className="contact-card">
+      <div className="w-full flex flex-col items-center relative">
         
         {/* Text Content */}
         <div className="max-w-xl text-center px-4 md:text-right md:ml-auto md:mr-20">
@@ -46,6 +46,7 @@ function Contact() {
             <HiOutlineMail className="text-white text-3xl hover:text-gray-300 transition-transform hover:scale-110" />
           </a>
         </div>
+      </div>
       </div>
     </section>
   );

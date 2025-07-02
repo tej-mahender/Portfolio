@@ -8,14 +8,18 @@ const ProjectCard = ({ project, onClick }) => {
     >
       {project.image ? (
         <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
-      ) : (
+      ) : project.iframe ? (
         <iframe
           src={project.iframe}
           className="w-full h-48 border-0"
           title={project.title}
           scrolling="no" 
         ></iframe>
-      )}
+      ): (
+        <div className="w-full h-48 bg-gray-100 flex items-center justify-center text-gray-500">
+          No preview
+        </div>
+  )}
       <div className="p-4 space-y-2">
         <h3 className="text-xl font-semibold">{project.title}</h3>
         <p className="text-gray-600 text-sm">{project.description}</p>

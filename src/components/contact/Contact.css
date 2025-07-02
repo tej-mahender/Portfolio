@@ -2,6 +2,11 @@
     display: flex;
     flex-direction: column;
     padding: 20px;
-    
     background-color:#644834;
+}
+.contact-card{
+    display: flex;
+    width: 100%;
+    padding-bottom: 100px;
+    background-color: #644834;
 }

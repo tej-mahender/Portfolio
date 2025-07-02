@@ -62,34 +62,37 @@ const Projects = () => {
         {/* Modal */}
         {selectedProject && (
           <div
-            className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50"
+            className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 px-4"
             onClick={() => setSelectedProject(null)}
           >
             <div
-              className="bg-white rounded-xl shadow-lg p-6 max-w-2xl w-full relative"
+              className="bg-white rounded-2xl shadow-lg p-6 max-w-3xl w-full max-h-[90vh] overflow-y-auto relative"
               onClick={(e) => e.stopPropagation()}
             >
               <button
-                className="absolute top-2 right-2 text-gray-500 hover:text-black text-xl"
+                className="absolute top-2 right-4 text-gray-500 hover:text-black text-2xl"
                 onClick={() => setSelectedProject(null)}
               >
                 &times;
               </button>
-              <h3 className="text-2xl font-bold mb-2">{selectedProject.title}</h3>
-              <p className="mb-4 text-gray-600">{selectedProject.description}</p>
-              {selectedProject.image ? (
-                <img
-                  src={selectedProject.image}
-                  alt={selectedProject.title}
-                  className="rounded w-full mb-4"
-                />
-              ) : (
+
+              <h3 className="text-3xl font-bold mb-4 text-gray-800">{selectedProject.title}</h3>
+              <p className="text-gray-600 mb-4">{selectedProject.description}</p>
+
+              {selectedProject.iframe ? (
                 <iframe
                   src={selectedProject.iframe}
-                  className="w-full h-64 mb-4 border"
+                  className="w-full h-72 border rounded mb-4"
                   title={selectedProject.title}
                 ></iframe>
+              ) : (
+                <div className="w-full h-72 bg-gray-200 flex items-center justify-center rounded mb-4 text-gray-600">
+                  No preview available
+                </div>
               )}
+
+              <p className="text-gray-700 mb-4">{selectedProject.details}</p>
+
               <div className="flex flex-wrap gap-2 text-sm mb-4">
                 {selectedProject.tech.map((tech, i) => (
                   <span key={i} className="bg-gray-800 text-white px-2 py-1 rounded">
@@ -97,13 +100,18 @@ const Projects = () => {
                   </span>
                 ))}
               </div>
-              <div className="flex gap-4 text-blue-600">
-                <a href={selectedProject.live} target="_blank" rel="noopener noreferrer">
-                  Live Site
-                </a>
-                <a href={selectedProject.code} target="_blank" rel="noopener noreferrer">
-                  Code
-                </a>
+
+              <div className="flex gap-4 text-blue-600 font-medium">
+                {selectedProject.live && (
+                  <a href={selectedProject.live} target="_blank" rel="noopener noreferrer">
+                    Live Site
+                  </a>
+                )}
+                {selectedProject.code && (
+                  <a href={selectedProject.code} target="_blank" rel="noopener noreferrer">
+                    Code
+                  </a>
+                )}
               </div>
             </div>
           </div>
