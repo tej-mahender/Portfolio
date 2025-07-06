@@ -4,6 +4,7 @@ import NavBar from "../navbar/Navbar";
 import About from "../about/About";
 import Projects from "../projects/Projects";
 import Contact from "../contact/Contact";
+import Header from "../header/Header";
 import { Typewriter } from "react-simple-typewriter";
 
 const Home = () => {
@@ -39,6 +40,8 @@ const Home = () => {
     </header>
     
     <NavBar/>
+    <Header />
+
 
     <section id="about" className="min-h-screen bg-[#ddd] p-10">
         <About />
@@ -49,6 +52,7 @@ const Home = () => {
       <section id="contact" className="bg-[#ccc] ">
         <Contact />
       </section>
+
     </>
   );
 };

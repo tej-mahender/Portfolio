@@ -1,10 +1,9 @@
 import { Home, User, Folder, Mail } from "lucide-react";
 import { Link, animateScroll as scroll } from "react-scroll";
 
-
 function NavBar() {
   return (
-    <nav className="fixed bottom-4 left-1/2 -translate-x-1/2 bg-white shadow-lg rounded-full p-2 flex gap-6 z-50">
+    <nav className="fixed bottom-4 left-1/2 -translate-x-1/2 z-[9999] bg-white shadow-lg rounded-full p-2 flex gap-6 z-50">
     <NavItem icon={<Home />} label="Home" onClick={() => scroll.scrollToTop({duration:0})} />
     <NavItem icon={<User />} label="About" to="about" />
     <NavItem icon={<Folder />} label="Projects" to="projects" />
