@@ -1,0 +1,178 @@
+/* Base layout */
+body {
+  background-color: rgb(246, 246, 202);
+  color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* Project Title */
+.project-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: black;
+}
+
+/* Gallery Section */
+.gallery {
+  margin-top: 2.5rem;
+}
+
+.gallery-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #333;
+  object-fit: cover;
+  height: 180px;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+/* Responsive stack for mobile */
+@media (max-width: 768px) {
+  .project-container {
+    grid-template-columns: 1fr;
+    padding: 1.5rem 1rem;
+  }
+}
+
+/* Left section */
+.project-left {
+  padding: 1rem;
+}
+
+/* Sidebar section */
+.project-sidebar {
+  background-color: gray;
+  padding: 1.5rem;
+  border: 1px solid #222;
+  border-radius: 12px;
+}
+
+.project-sidebar h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-sidebar p {
+  margin: 0.5rem 0;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-bottom: 1px solid #333;
+  margin-bottom: 1.5rem;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  color: #888;
+  font-weight: bold;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+  color: #fff;
+}
+
+.tab-button.active {
+  color: #fff;
+  border-color: #fff;
+}
+
+.tab-content {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* Buttons */
+.project-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.live-button,
+.code-button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  font-size: 1rem;
+}
+
+.live-button {
+  background-color: #fff;
+  color: #000;
+}
+
+.live-button:hover {
+  background-color: #eee;
+}
+
+.code-button {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.code-button:hover {
+  background-color: #222;
+}
+
+/* Not found */
+.not-found {
+  padding: 4rem;
+  color: white;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+/* Mobile-specific tweaks */
+@media (max-width: 480px) {
+  .tab-button {
+    font-size: 0.9rem;
+  }
+
+  .live-button,
+  .code-button {
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .project-sidebar h2 {
+    font-size: 1.25rem;
+  }
+
+  .tab-content {
+    font-size: 0.95rem;
+  }
+}
