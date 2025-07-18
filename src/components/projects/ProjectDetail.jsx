@@ -1,6 +1,8 @@
 import { useParams } from "react-router-dom";
 import projects from "./projectData";
 import { useState } from "react";
+import { FaCalendarAlt, FaUserTie, FaCheckCircle, FaExternalLinkAlt, FaCodeBranch } from "react-icons/fa";
+
 import "./ProjectDetail.css"; // Importing the CSS file
 
 const TABS = ["Overview", "Features", "Challenges & Solutions"];
@@ -47,9 +49,11 @@ const ProjectDetail = () => {
             </button>
           ))}
         </div>
+
         <div className="tab-content">
           {renderTabContent()}
         </div>
+
       {/* Gallery */}
         {project.gallery?.length > 0 && (
           <div className="gallery">
@@ -64,25 +68,26 @@ const ProjectDetail = () => {
       </div>
 
       {/* Sidebar */}
-      <div className="project-sidebar">
-        <h2>Project Details</h2>
-        <p><strong>Timeline:</strong> {project.timeline}</p>
-        <p><strong>Role:</strong> {project.role}</p>
-        <p><strong>Completed:</strong> {project.completed}</p>
+<div className="project-sidebar">
+  <h2>Project Details</h2>
+  <p><FaCalendarAlt className="icon" /> <strong>Timeline:</strong> {project.timeline}</p>
+  <p><FaUserTie className="icon" /> <strong>Role:</strong> {project.role}</p>
+  <p><FaCheckCircle className="icon" /> <strong>Completed:</strong> {project.completed}</p>
 
-        <div className="project-buttons">
-          {project.live && (
-            <a href={project.live} target="_blank" rel="noreferrer" className="live-button">
-              View Live Project
-            </a>
-          )}
-          {project.code && (
-            <a href={project.code} target="_blank" rel="noreferrer" className="code-button">
-              View Source Code
-            </a>
-          )}
-        </div>
-      </div>
+  <div className="project-buttons">
+    {project.live && (
+      <a href={project.live} target="_blank" rel="noreferrer" className="live-button">
+        <FaExternalLinkAlt className="icon" /> View Live Project
+      </a>
+    )}
+    {project.code && (
+      <a href={project.code} target="_blank" rel="noreferrer" className="code-button">
+        <FaCodeBranch className="icon" /> View Source Code
+      </a>
+    )}
+  </div>
+</div>
+
     </div>
   );
 };
